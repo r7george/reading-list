@@ -1,0 +1,40 @@
+@use "../../assets/styles/_variables.scss" as *;
+
+.search-box {
+  width: 17rem;
+  height: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+  background-color: $search-box-color;
+  border-radius: 1.25rem;
+
+  .fas {
+    font-size: 1.3125em;
+    color: $search-box-icon;
+  }
+
+  &__input {
+    margin-left: 0.6rem;
+    width: 100%;
+    border: none;
+
+    &::-webkit-input-placeholder {
+      font-family: $body-font-family;
+      color: $search-box-placeholder-text;
+    }
+    &:-ms-input-placeholder {
+      font-family: $body-font-family;
+      color: $search-box-placeholder-text;
+    }
+    &:-moz-placeholder {
+      font-family: $body-font-family;
+      color: $search-box-placeholder-text;
+    }
+    &::-moz-placeholder {
+      font-family: $body-font-family;
+      color: $search-box-placeholder-text;
+    }
+  }
+}
