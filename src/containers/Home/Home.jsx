@@ -1,6 +1,7 @@
 import "./Home.scss";
 import React, {useState} from "react";
 import BookTile from "../../components/BookTile/BookTile";
+import BookInfoTile from "../../components/BookInfoTile/BookInfoTile";
 
 const Home = ({bookData}) => {
 
@@ -35,8 +36,8 @@ const Home = ({bookData}) => {
   return (
     <section className="home">
       {/* {(showBookInfo ? null : homeJSX) } */}
-      {homeJSX}
-      
+      {/* {homeJSX} */}
+      <BookInfoTile title="test" author="test" genres="test" description="test" addedBy="test"/>
     </section>
   )
 }
