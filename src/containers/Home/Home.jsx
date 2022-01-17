@@ -1,22 +1,42 @@
 import "./Home.scss";
-import react from "react";
+import React, {useState} from "react";
 import BookTile from "../../components/BookTile/BookTile";
 
 const Home = ({bookData}) => {
 
-  const BookTilesJSX = bookData.map((book) => {
-    console.log(book.bookName);
-    console.log(book.author);
-    console.log(book.genres);
-    return <BookTile title={book.bookName} author={book.author} genres={book.genres} />
-  })
+  const [showBookInfo, setShowBookInfo] = useState(false);
+  const [bookInfo, setBookInfo] = useState({});
 
-  // console.log(bookData);
+
+  const handleClick = (e) => {
+    setShowBookInfo(!showBookInfo);
+    const book = bookData.filter((book) => {
+      return book.bookName == e.target.childNodes[0].innerText;
+    });
+    setBookInfo(book[0]);
+    console.log(bookInfo);
+  }
+
+  const BookTilesJSX = bookData.map((book, index) => {
+    return <BookTile key={index} title={book.bookName} author={book.author} genres={book.genres} handleClick={handleClick} />
+  });
+
+  const homeJSX = (
+    <>
+      <h2 className="home__header">Reading List</h2>
+      <div className="book-tiles">{BookTilesJSX}</div>
+    </>
+  );
+
+  // const bookInfoJSX = (
+
+  // );
 
   return (
     <section className="home">
-      <h2 className="home__header">Reading List</h2>
-      <div className="book-tiles">{BookTilesJSX}</div>
+      {/* {(showBookInfo ? null : homeJSX) } */}
+      {homeJSX}
+      
     </section>
   )
 }
