@@ -15,7 +15,10 @@ const Home = ({bookData}) => {
       return book.bookName == e.target.childNodes[0].innerText;
     });
     setBookInfo(book[0]);
-    console.log(bookInfo);
+  }
+
+  const handleTileClick = () => {
+    setShowBookInfo(!showBookInfo);
   }
 
   const BookTilesJSX = bookData.map((book, index) => {
@@ -29,15 +32,13 @@ const Home = ({bookData}) => {
     </>
   );
 
-  // const bookInfoJSX = (
-
-  // );
+  const bookInfoJSX = (
+    <BookInfoTile title={bookInfo.bookName} author={bookInfo.author} genres={bookInfo.genres} description={bookInfo.description} addedBy={bookInfo.addedBy} handleTileClick={handleTileClick} />
+  );
 
   return (
     <section className="home">
-      {/* {(showBookInfo ? null : homeJSX) } */}
-      {/* {homeJSX} */}
-      <BookInfoTile title="test" author="test" genres="test" description="test" addedBy="test"/>
+      {showBookInfo ? bookInfoJSX : homeJSX}
     </section>
   )
 }

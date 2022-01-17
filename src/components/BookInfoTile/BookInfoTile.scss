@@ -3,7 +3,45 @@
 .book-info-tile {
   width: 20rem;
   height: calc(100% - 5.5rem);
-  padding: 1rem;
+  padding: 1.25rem 2rem;
   border-radius: 0.625rem;
   background-color: $book-tile-background-color;
+  overflow: scroll;
+
+  > * {
+    font-weight: normal;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 25px;
+    font-family: $heading-font-family;
+    color: $book-tile-header-color;
+  }
+
+  &__author {
+    font-size: 20px;
+    font-family: $body-font-family;
+    color: $book-tile-author-color;
+    margin: 0.2rem 0;
+  }
+
+  &__genres {
+    font-size: 16px;
+    font-family: $body-font-family;
+    color: $book-tile-header-color;
+    margin-bottom: 0.75rem;
+  }
+
+  &__desc {
+    text-align: left;
+    margin-bottom: 0.2rem;
+    color: $book-tile-header-color;
+  }
+
+  &__addedBy {
+    font-size: 14px;
+    text-align: left;
+    color: $book-tile-author-color;
+  }
 }
