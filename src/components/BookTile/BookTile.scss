@@ -1,0 +1,35 @@
+@use "../../assets/styles/_variables" as *;
+
+.book-tile {
+
+  background-color: $book-tile-background-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 14rem;
+  padding: 0.625rem;
+  border-radius: 0.625rem;
+  margin-bottom: 1rem;
+
+  &__title {
+    font-size: 16px;
+    font-family: $heading-font-family;
+    color: $book-tile-header-color;
+    font-weight: normal;
+  }
+
+  &__author {
+    font-size: 12px;
+    font-family: $body-font-family;
+    color: $book-tile-author-color;
+    font-weight: normal;
+  }
+
+  &__genres {
+    font-size: 12px;
+    font-family: $body-font-family;
+    color: $book-tile-header-color;
+    font-weight: normal;
+  }
+}

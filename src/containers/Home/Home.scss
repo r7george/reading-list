@@ -1,0 +1,19 @@
+@use "../../assets/styles/_variables" as *;
+
+.home {
+  // to move it below the header
+  padding-top: 11.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $mobile-background-color;
+
+  &__header {
+    margin-bottom: 1rem;
+    font-size: 22px;
+    font-weight: normal;
+    font-family: $heading-font-family;
+    color: $heading-color;
+  }
+}
