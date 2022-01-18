@@ -8,7 +8,6 @@ import books from "./data/books.js";
 import Header from './components/Header/Header';
 import Home from "./containers/Home/Home";
 import NavBar from "./components/NavBar/NavBar";
-import BookForm from "./components/BookForm/BookForm";
 import AddBook from "./containers/AddBook/AddBook";
 
 function App() {
@@ -27,14 +26,18 @@ function App() {
     }
   )
   const handleClick = (e) => {
-    
+    if(e.target.className.includes("fa-book")) {
+      setShowAddBook(false);
+    }else if(e.target.className.includes("fa-plus-circle")) {
+      setShowAddBook(true);
+    }
   }
 
   return (
     <div className="App">
       <Header handleInput={handleInput} />
       {showAddBook ? <AddBook/> : <Home bookData={filteredBookArr} /> }
-      <NavBar />
+      <NavBar isClicked={handleClick}/>
     </div>
   );
 }

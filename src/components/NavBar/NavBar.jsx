@@ -22,10 +22,10 @@ const NavBar = ({isClicked}) => {
 
   return (
     <nav className="nav-bar">
-      <button className="nav-bar__btn home-btn">
+      <button className="nav-bar__btn home-btn" onClick={isClicked}>
         <i className="fas fa-book" onClick={handleClick}></i>
       </button>
-      <button className="nav-bar__btn add-btn">
+      <button className="nav-bar__btn add-btn" onClick={isClicked}>
         <i className="fas fa-plus-circle" onClick={handleClick}></i>
       </button>
     </nav>
