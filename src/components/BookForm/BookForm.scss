@@ -1,8 +1,6 @@
 @use "../../assets/styles/_variables" as *;
 
 .book-form {
-  //needs to be removed later
-  // padding-top: 11.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +8,7 @@
 
   &__input-text, &__textarea {
     width: 13.5rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
     padding: 0.2rem;
     background-color: $search-box-color;
     overflow: auto;
@@ -18,7 +16,7 @@
     font-size: 16px;
     font-family: $body-font-family;
     color: $book-tile-header-color;
-    // border: none;
+    border: none;
 
     &::-webkit-input-placeholder {
       text-align: center;
@@ -48,14 +46,15 @@
 
   &__textarea {
     resize: none;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
+
   }
 
   &__btn {
     font-family: $heading-font-family;
     color: $search-box-color;
     font-size: 16px;
-    padding: 0.75rem 1.25rem;
+    padding: 0.5rem 1.25rem;
     background-color: $heading-color;
     border-radius: 0.625rem;
     border: none;

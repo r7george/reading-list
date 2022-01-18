@@ -16,7 +16,7 @@ const BookForm = () => {
       <input placeholder="Author" type="text" className="book-form__input-text" />
       <input placeholder="Genres" type="text" className="book-form__input-text" />
       <input placeholder="Added By" type="text" className="book-form__input-text" />
-      <textarea placeholder="Description" cols="30" rows="5" className="book-form__textarea"></textarea>
+      <textarea placeholder="Description" cols="30" rows="4" className="book-form__textarea"></textarea>
       <button type="submit" className="book-form__btn">Submit</button>
     </form>
   )

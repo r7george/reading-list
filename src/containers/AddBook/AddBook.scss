@@ -1,0 +1,30 @@
+@use "../../assets/styles/_variables" as *;
+
+.add-book {
+  padding-top: 11.5rem;
+  height: 100vh;
+  width: 100vw;
+  background-color: $mobile-background-color;
+  display: flex;
+  justify-content: center;
+
+  .formatting-div {
+    height: calc(100% - 5.5rem);
+    background-color: $book-tile-background-color;
+    width: 20rem;
+    padding: 1.25rem 2rem;
+    border-radius: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__header {
+    margin-bottom: 1rem;
+    font-size: 22px;
+    font-weight: normal;
+    font-family: $heading-font-family;
+    color: $heading-color;
+  }
+
+}
