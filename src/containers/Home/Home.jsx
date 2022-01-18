@@ -11,8 +11,9 @@ const Home = ({bookData}) => {
 
   const handleClick = (e) => {
     setShowBookInfo(!showBookInfo);
+    // need to think of a better way to do this
     const book = bookData.filter((book) => {
-      return book.bookName == e.target.childNodes[0].innerText;
+      return (book.bookName == e.target.childNodes[0].innerText || book.bookName == e.target.outerText || book.author == e.target.outerText || book.genres == e.target.outerText);
     });
     setBookInfo(book[0]);
   }

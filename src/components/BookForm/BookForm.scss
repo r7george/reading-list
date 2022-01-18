@@ -1,0 +1,63 @@
+@use "../../assets/styles/_variables" as *;
+
+.book-form {
+  //needs to be removed later
+  // padding-top: 11.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 13.5rem;
+
+  &__input-text, &__textarea {
+    width: 13.5rem;
+    margin-bottom: 0.75rem;
+    padding: 0.2rem;
+    background-color: $search-box-color;
+    overflow: auto;
+    text-align: center;
+    font-size: 16px;
+    font-family: $body-font-family;
+    color: $book-tile-header-color;
+    // border: none;
+
+    &::-webkit-input-placeholder {
+      text-align: center;
+      font-size: 16px;
+      font-family: $body-font-family;
+      color: $search-box-placeholder-text;
+    }
+    &:-ms-input-placeholder {
+      text-align: center;
+      font-size: 16px;
+      font-family: $body-font-family;
+      color: $search-box-placeholder-text;
+    }
+    &:-moz-placeholder {
+      text-align: center;
+      font-size: 16px;
+      font-family: $body-font-family;
+      color: $search-box-placeholder-text;
+    }
+    &::-moz-placeholder {
+      text-align: center;
+      font-size: 16px;
+      font-family: $body-font-family;
+      color: $search-box-placeholder-text;
+    }
+  }
+
+  &__textarea {
+    resize: none;
+    margin-bottom: 1rem;
+  }
+
+  &__btn {
+    font-family: $heading-font-family;
+    color: $search-box-color;
+    font-size: 16px;
+    padding: 0.75rem 1.25rem;
+    background-color: $heading-color;
+    border-radius: 0.625rem;
+    border: none;
+  }
+}

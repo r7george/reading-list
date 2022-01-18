@@ -8,6 +8,7 @@ import books from "./data/books.js";
 import Header from './components/Header/Header';
 import Home from "./containers/Home/Home";
 import NavBar from "./components/NavBar/NavBar";
+import BookForm from "./components/BookForm/BookForm";
 
 function App() {
 
