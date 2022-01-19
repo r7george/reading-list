@@ -1,9 +1,7 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 import './App.scss';
 import './assets/styles/_normalise.scss';
-
-import books from "./data/books.js";
 
 import Header from './components/Header/Header';
 import Home from "./containers/Home/Home";
@@ -15,6 +13,15 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [showAddBook, setShowAddBook] = useState(false);
 
+  const [books, setBooks] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8080/reading-list")
+      .then(response => response.json())
+      .then(json => setBooks(json))
+      .catch(err => console.log(err))
+  }, [])
+  
   const handleInput = (e) => {
     const cleanInput = e.target.value.toLowerCase();
     setSearchTerm(cleanInput);

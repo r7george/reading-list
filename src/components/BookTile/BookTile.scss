@@ -17,6 +17,8 @@
     font-family: $heading-font-family;
     color: $book-tile-header-color;
     font-weight: normal;
+    text-align: center;
+    margin-bottom: 0.2rem;
   }
 
   &__author {
@@ -24,6 +26,7 @@
     font-family: $body-font-family;
     color: $book-tile-author-color;
     font-weight: normal;
+    text-align: center;
   }
 
   &__genres {
@@ -31,5 +34,6 @@
     font-family: $body-font-family;
     color: $book-tile-header-color;
     font-weight: normal;
+    text-align: center;
   }
 }

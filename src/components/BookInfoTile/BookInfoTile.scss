@@ -34,14 +34,12 @@
   }
 
   &__desc {
-    text-align: left;
     margin-bottom: 0.2rem;
     color: $book-tile-header-color;
   }
 
   &__addedBy {
     font-size: 14px;
-    text-align: left;
     color: $book-tile-author-color;
   }
 }
