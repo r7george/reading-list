@@ -29,7 +29,7 @@ const Home = ({bookData}) => {
   const homeJSX = (
     <>
       <h2 className="home__header">Reading List</h2>
-      <div className="book-tiles">{BookTilesJSX}</div>
+      <div className="home__book-tiles">{BookTilesJSX}</div>
     </>
   );
 

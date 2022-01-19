@@ -18,3 +18,16 @@
     color: $heading-color;
   }
 }
+
+// tablets, but scales for desktops too
+@media only screen and (min-width: 641px) {
+  .home {
+    
+    &__book-tiles {
+      width: 100vw;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
