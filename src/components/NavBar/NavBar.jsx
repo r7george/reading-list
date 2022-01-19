@@ -1,4 +1,5 @@
 import React from "react";
+import NavButton from "../NavBtn/NavBtn";
 import "./NavBar.scss";
 
 const NavBar = ({isClicked}) => {
@@ -22,12 +23,8 @@ const NavBar = ({isClicked}) => {
 
   return (
     <nav className="nav-bar">
-      <button className="nav-bar__btn home-btn" onClick={isClicked}>
-        <i className="fas fa-book" onClick={handleClick}></i>
-      </button>
-      <button className="nav-bar__btn add-btn" onClick={isClicked}>
-        <i className="fas fa-plus-circle" onClick={handleClick}></i>
-      </button>
+      <NavButton isClicked={isClicked} handleClick={handleClick} btnType={"book"} />
+      <NavButton isClicked={isClicked} handleClick={handleClick} btnType={"plus"} />
     </nav>
   )
 }

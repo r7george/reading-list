@@ -10,34 +10,4 @@
   position: fixed;
   bottom: 0%;
   background-color: $navbar-background-color;
-  // border-radius: 1.25rem 1.25rem 0 0;
-
-  &__btn {
-    width: 4.6rem;
-    border: none;
-    background-color: transparent;
-
-    > i {
-      font-size: 35px;
-      padding: 0.75rem 1.25rem;
-      width: 100%;
-      height: 100%;
-    }
-
-    > .fa-book {
-      color: $navbar-btn-active-color;
-    }
-
-    > .fa-plus-circle {
-      color: $navbar-btn-inactive-color;
-    }
-
-    .active {
-      color: $navbar-btn-active-color;
-    }
-
-    .inactive {
-      color: $navbar-btn-inactive-color;
-    }
-  }
 }
