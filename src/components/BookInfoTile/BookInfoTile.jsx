@@ -19,6 +19,7 @@ const BookInfoTile = ({title, author, genres, description, addedBy, handleTileCl
       <h5 className="book-info-tile__genres">{genresUC}</h5>
       <p className="book-info-tile__desc">{descUC}</p>
       <h6 className="book-info-tile__addedBy">Created by: {addedUC}</h6>
+      <p className="book-info-tile__note">Please click again to go back to Reading List</p>
     </div>
   )
 }

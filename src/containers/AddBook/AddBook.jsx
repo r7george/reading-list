@@ -8,6 +8,7 @@ const AddBook = () => {
       <div className="formatting-div">
         <h2 className="add-book__header">Add to Reading List</h2>
         <BookForm />
+        <div className="empty-formatting-div">&nbsp;</div>
       </div>
     </section>
   )

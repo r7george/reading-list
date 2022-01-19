@@ -42,4 +42,30 @@
     font-size: 14px;
     color: $book-tile-author-color;
   }
+
+  &__note {
+    font-size: 10px;
+    color: $book-tile-author-color;
+    font-style: italic;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .book-info-tile {
+    width: calc(100% - 10rem);
+    height: fit-content;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .book-info-tile {
+    width: calc(100% - 30rem);
+  }
 }
