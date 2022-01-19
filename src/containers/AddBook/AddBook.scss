@@ -33,3 +33,16 @@
   }
 
 }
+
+@media only screen and (min-height: 768px) {
+  .add-book {
+    .formatting-div {
+      height: fit-content;
+      padding: 1.5rem 2rem 2rem 2rem;
+    }
+
+    .empty-formatting-div {
+      display: none;
+    }
+  }
+}
