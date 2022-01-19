@@ -1,7 +1,7 @@
 import React from "react";
 import "./NavBtn.scss";
 
-const NavButton = ({isClicked, handleClick, btnType}) => {
+const NavButton = ({handleClick, btnType}) => {
   
   let btnClassName = "nav-bar__btn";
   let btnIClassName = "fas";
@@ -15,7 +15,7 @@ const NavButton = ({isClicked, handleClick, btnType}) => {
   }
 
   return (
-    <button className={btnClassName} onClick={isClicked}>
+    <button className={btnClassName} onClick={handleClick}>
       <i className={btnIClassName} onClick={handleClick}></i>
     </button>
   )

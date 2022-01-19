@@ -33,18 +33,29 @@ function App() {
     }
   )
   const handleClick = (e) => {
+    const homeBtn = document.querySelector(".fa-book");
+    const addBtn = document.querySelector(".fa-plus-circle");
+
     if(e.target.className.includes("fa-book")) {
+      homeBtn.classList.add("active");
+      homeBtn.classList.remove("inactive");
+      addBtn.classList.remove("active");
+      addBtn.classList.add("inactive");
       setShowAddBook(false);
-    }else if(e.target.className.includes("fa-plus-circle")) {
+    } else if (e.target.className.includes("fa-plus-circle")) {
+      addBtn.classList.add("active");
+      addBtn.classList.remove("inactive");
+      homeBtn.classList.remove("active");
+      homeBtn.classList.add("inactive");
       setShowAddBook(true);
     }
   }
 
   return (
     <div className="App">
-      <Header handleInput={handleInput} />
+      <Header handleInput={handleInput} handleClick={handleClick} />
       {showAddBook ? <AddBook/> : <Home bookData={filteredBookArr} /> }
-      <NavBar isClicked={handleClick}/>
+      <NavBar handleClick={handleClick}/>
     </div>
   );
 }
