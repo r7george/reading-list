@@ -27,3 +27,31 @@
     }
   }
 }
+
+// tablets
+@media only screen and (min-width: 641px) {
+  .header {
+    background-color: $navbar-background-color;
+
+    &__heading {
+      font-size: 60px;
+      color: $search-box-color;
+    }
+
+
+    &__interactive-features {
+      display: flex;
+      align-items: center;
+
+      > button {
+        display: block;
+      }
+    }
+  }
+}
+
+// desktops
+@media only screen and (min-width: 1008px) {
+	// only happens after screen > 768px
+	// write code in here
+}

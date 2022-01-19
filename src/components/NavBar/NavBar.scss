@@ -11,3 +11,10 @@
   bottom: 0%;
   background-color: $navbar-background-color;
 }
+
+// tablets
+@media only screen and (min-width: 641px) {
+  .nav-bar {
+    display: none;
+  }
+}
